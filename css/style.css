@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600;700&display=swap');
 
 :root {
   --bg-black-900: #f2f2fc;
@@ -19,7 +19,7 @@ body.dark {
 body {
   line-height: 1.5;
   font-size: 16px;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 html {
@@ -46,7 +46,8 @@ ul {
 .section {
   background-color: var(--bg-black-900);
   min-height: 100vh;
-  display: block;
+  display: flex;
+  align-items: center;
   padding: 0 30px;
   opacity: 1;
 }
@@ -126,7 +127,7 @@ ul {
 }
 
 .section-title h2::before {
-  content: "";
+  content: '';
   height: 4px;
   width: 50px;
   background-color: var(--skin-color);
@@ -136,7 +137,7 @@ ul {
 }
 
 .section-title h2::after {
-  content: "";
+  content: '';
   height: 4px;
   width: 25px;
   background-color: var(--skin-color);
@@ -151,6 +152,14 @@ ul {
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
+  position: relative;
+}
+
+.service .row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
   position: relative;
 }
 
@@ -193,7 +202,7 @@ ul {
 }
 
 .head .nav-toggler span::before {
-  content: "";
+  content: '';
   height: 2px;
   width: 18px;
   background: var(--skin-color);
@@ -203,7 +212,7 @@ ul {
 }
 
 .head .nav-toggler span::after {
-  content: "";
+  content: '';
   height: 2px;
   width: 18px;
   background: var(--skin-color);
@@ -262,7 +271,7 @@ h3.hello {
 }
 
 h3.hello span {
-  font-family: "Clicker Script", cursive;
+  font-family: 'Clicker Script', cursive;
   font-size: 30px;
   font-weight: 700;
   color: var(--skin-color);
@@ -472,7 +481,7 @@ h3.my-profession {
 }
 
 .about .about-content .timline .timline-item::before {
-  content: "";
+  content: '';
   width: 1px;
   position: absolute;
   height: 7px;
@@ -524,22 +533,29 @@ h3.my-profession {
 
 .service .service-item {
   margin-bottom: 30px;
-  flex: 0 0 33.33%;
-  max-width: 33.33%;
-}
-
-.service .service-item .service-item-inner {
+  flex: 0 0 47%;
   border-color: var(--bg-black-100);
   border: 1px solid var(--bg-black-50);
   border-radius: 10px;
   padding: 30px 15px;
   text-align: center;
   transition: all 0.3s ease;
-}
-
-.service .service-item .service-item-inner:hover {
+  max-width: 50%;
   box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
 }
+
+/* .service .service-item .service-item-inner {
+  border-color: var(--bg-black-100);
+  border: 1px solid var(--bg-black-50);
+  border-radius: 10px;
+  padding: 30px 15px;
+  text-align: center;
+  transition: all 0.3s ease;
+} */
+
+/* .service .service-item .service-item-inner:hover {
+  box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+} */
 
 .service .service-item .service-item-inner .icon {
   height: 60px;
@@ -660,7 +676,7 @@ h3.my-profession {
   font-size: 16px;
   line-height: 25px;
   color: var(--text-black-700);
-  font-weight: 400;             
+  font-weight: 400;
 }
 
 .contact .contact-form {
@@ -754,8 +770,8 @@ h3.my-profession {
 
 @media (max-width: 900px) {
   .contact .contact-info-item,
-  .portfolio .portfolio-item,
-  .service .service-item {
+  /* .service .service-item, */
+  .portfolio .portfolio-item {
     flex: 0 0 50%;
     max-width: 50%;
   }
